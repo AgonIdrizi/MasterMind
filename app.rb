@@ -13,10 +13,16 @@ game = MasterMind.new
 colors = Color.new
 board = Board.new
 
+begin
 
 puts "Please enter do you want to play against computer"
 input = gets.chomp
-
+  if input != "y" and input != "n"
+	raise "Wrong word typed"
+  end
+  rescue 
+  retry
+end
 
  if input == "y"
    puts "Computer enters secret code"
