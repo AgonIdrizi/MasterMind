@@ -2,7 +2,7 @@
 class MasterMind
   @@feedback = 0
   @@feedbackarr = []
-  @@turn = 0
+  
   
 
   def play(player, secretcode)
@@ -22,7 +22,7 @@ class MasterMind
   	@@feedback
   end
 
-  def feedback_same_position(player, secretcode) #this prints feedback array, with guesses in the same position
+  def feedback_same_position(player, secretcode) #this gives feedback array, with guesses in the same position
   	player.each_with_index do |item1,i|
   	  @@feedbackarr<<player[i] if player[i] == secretcode[i]
   	end
